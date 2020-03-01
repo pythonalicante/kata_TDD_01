@@ -1,0 +1,74 @@
+*.pyc
+*.sublime-workspace
+*.sublime-project
+*.orig
+*.coverage
+*.mo
+*.log
+*.sql
+*.env
+*__pycache__/*
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.idea
+.vscode
+.vs
+*.retry
+ehthumbs.db
+Thumbs.db
+static/*
+media/*
+
+# Docker volumes files #
+########################
+
+.docker/
+.docker-sync
+
+# Vim files #
+#############
+
+*.swp
+*.swo
+
+# Visual Studio Code #
+######################
+
+.vscode
+.vscode/*
+
+# Lockfiles #
+############
+.~lock*
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+bin/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
