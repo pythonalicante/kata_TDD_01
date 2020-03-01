@@ -22,7 +22,7 @@ fizzbuzz(37) == 37
 fizzbuzz(45) == "fizz buzz"
 ```
 
-Launch in console:
+Launch tests in console:
 
 ```bash
 python -m test.test_fizz_buzz
