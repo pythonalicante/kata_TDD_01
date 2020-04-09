@@ -4,6 +4,15 @@ from string_adder import string_adder
 
 class TestStringAdder(unittest.TestCase):
 
+    def test_sum_two_numbers_gt_10(self): 
+        # Inicializacion
+        param = "11,22"
+        expected = 33
+        # Accion
+        result = string_adder(param)
+        # Comprobacion
+        self.assertEqual(expected, result)
+
     def test_sum_two_numbers(self): 
         # Inicializacion
         param = "1,2"
