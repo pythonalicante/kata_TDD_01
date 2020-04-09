@@ -40,5 +40,33 @@ class TestStringAdder(unittest.TestCase):
         # Comprobacion
         self.assertEqual(expected, result) 
 
+    def test_accept_backslash_n(self):
+        # Inicializacion
+        param = "1\n2,3"
+        expected = 6
+        # Accion
+        result = string_adder(param)
+        # Comprobacion
+        self.assertEqual(expected, result) 
+
+    def test_not_accept_comma_backslash_n(self):
+        # Inicializacion
+        param = "1,\n"
+        expected = -1
+        # Accion
+        result = string_adder(param)
+        # Comprobacion
+        self.assertEqual(expected, result)
+
+    def test_accept_backslash_n_and_commas(self):
+        # Inicializacion
+        param = "1\n2,3\n4,5"
+        expected = 15
+        # Accion
+        result = string_adder(param)
+        # Comprobacion
+        self.assertEqual(expected, result) 
+
+
 if __name__ == '__main__':
     unittest.main()
