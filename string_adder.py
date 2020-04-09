@@ -30,7 +30,12 @@ def string_adder(numbers):
         return -1
     
     numbers = numbers.replace('\n', delimiter)
-    array_int_numbers = (int(n) for n in numbers.split(delimiter))
+    
+    array_int_numbers = tuple(int(n) for n in numbers.split(delimiter))
+    
+    negative_numbers = tuple(str(n) for n in array_int_numbers if n < 0)
+    
+    if negative_numbers:
+        raise ValueError(f"negatives not allowed: {', '.join(negative_numbers)}")
     
     return sum(array_int_numbers)
-    

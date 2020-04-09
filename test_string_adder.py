@@ -94,5 +94,27 @@ class TestStringAdder(unittest.TestCase):
         # Comprobacion
         self.assertEqual(expected, result) 
 
+    def test_no_accept_one_negative(self):
+        # Inicializacion
+        param = "-1,2,3"
+        expected = "negatives not allowed: -1"
+        # Accion
+        with self.assertRaises(ValueError) as context:
+            result = string_adder(param)
+        print(context.exception)
+        # Comprobacion
+        self.assertEqual(expected, f"{expected}") 
+
+    def test_no_accept_negatives(self):
+                # Inicializacion
+        param = "-1,2,-3"
+        expected = "negatives not allowed: -1, -3"
+        # Accion
+        with self.assertRaises(ValueError) as context:
+            result = string_adder(param)
+        print(context.exception)
+        # Comprobacion
+        self.assertEqual(expected, f"{expected}") 
+
 if __name__ == '__main__':
     unittest.main()
