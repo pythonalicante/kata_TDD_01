@@ -116,5 +116,14 @@ class TestStringAdder(unittest.TestCase):
         # Comprobacion
         self.assertEqual(expected, f"{expected}") 
 
+    def test_ignore_numbers_greater_than_1000(self):
+        # Inicializacion
+        param = "1,2,3,1001"
+        expected = 6
+        # Accion
+        result = string_adder(param)
+        # Comprobacion
+        self.assertEqual(expected, result) 
+
 if __name__ == '__main__':
     unittest.main()
