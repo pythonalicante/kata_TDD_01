@@ -85,6 +85,14 @@ class TestStringAdder(unittest.TestCase):
         # Comprobacion
         self.assertEqual(expected, result) 
 
+    def test_can_change_delimiter_and_typo(self):
+        # Inicializacion
+        param = "//;\n1;\n2;3"
+        expected = -1
+        # Accion
+        result = string_adder(param)
+        # Comprobacion
+        self.assertEqual(expected, result) 
 
 if __name__ == '__main__':
     unittest.main()
