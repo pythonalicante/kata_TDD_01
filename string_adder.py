@@ -12,11 +12,8 @@ def string_adder(numbers):
         numbers separeted by comma
     """
     if numbers != "":
-        commas_count = numbers.count(",")
-        if commas_count == 0:
-            return int(numbers)
-        else:
-            number_a, number_b = numbers.split(",")
-        return int(number_a) + int(number_b)
+        array_str_numbers = numbers.split(",")
+        array_int_numbrs = [int(n) for n in array_str_numbers]
+        return sum(array_int_numbrs)
     else:
         return 0
